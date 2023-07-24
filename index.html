@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="style.css" />
+   <title>Checklist</title>
+  
+</head>
+
+<body>
+   <main>
+      <div class="heading">
+         <h1>Website production launch checklist Generater</h1>
+      </div>
+      <div>
+         <div class="flex">
+            <div class="left" id="left">
+               <form class="myForm" id="myForm">
+                  <label for="projectName">
+                     <p>Project Name:</p>
+                  </label>
+                  <input type="text" id="projectName" placeholder="Project Title" />
+                  <br />
+
+                  <label for="projectType">
+                     <p>Project Type:</p>
+                  </label>
+                  <select name="type" id="options" name="options" required>
+                     <option disabled selected value="selectplz">
+                        Select Project Type
+                     </option>
+                     <option value="website">Website</option>
+                     <option value="saas">SaaS</option>
+                     <option value="ecommerce">E-Commerce</option>
+                  </select>
+
+                  <label for="projectName">
+                     <p>Project Discription:</p>
+                  </label>
+                  <textarea id="projectDescription" placeholder="This is the project about..."></textarea><br />
+                  <input type="submit" class="submit" id="submitdata" value="Generate Checklist" />
+               </form>
+            </div>
+
+            <div class="right" id="right">
+               <h2>Checklist:</h2>
+               <ul id="inputedData">
+
+               </ul>
+               <div class="checklistpart" id="checklistpart">
+                  
+                  <ul id="checklist" type="none">
+                     Please wait...
+                     <!-- -------------------------------------------------------------------------------------------  -->
+                  </ul>
+                  <br />
+
+                  <div class="forbuttonflex">
+                     <input type="submit" class="rightbutton" id="saveData" value="DOWNLOAD" onclick="printPage()" />
+                     <input type="submit" class="rightbutton" id="changeData" value="Change Data"
+                        onclick="refreshPage()" />
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </main>
+   <!-- ------------------------------------------------------------------------------------------- -->
+
+   <script type="module" src="script.js"></script>
+   <script src="print-refresh.js"></script>
+   
+
+   <!-- add this before the closing of the body tag -->
+   <!-- <script type="module">
+      // document.getElementById('frmContact').addEventListener('submit', function (e) {
+      //     e.preventDefault();
+      //     set(ref(db, 'users/' + Math.random().toString(36).slice(2, 7)), {
+      //         name: document.getElementById('fullname').value,
+      //         email: document.getElementById('email').value,
+      //         subject: document.getElementById('subject').value,
+      //         message: document.getElementById('message').value
+      //     });
+
+      //     alert('Your form is submitted');
+      //     document.getElementById('frmContact').reset();
+      // });
+    </scrip> -->
+</body>
+
+</html>
